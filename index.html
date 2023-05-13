@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>基于深度学习的神经细胞追踪技术研究</title>
+  </head>
+  <link rel="stylesheet" href="css/gifplayer.css">
+  <style>
+      .gifplayer{
+        width: 430px;
+      height: 323px;
+      }
+
+    .video-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .inner-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .col {
+      float: left;
+      width: 33%;
+      box-sizing: border-box;
+      padding: 20px;
+    }
+
+    .clear {
+      clear: both;
+    }
+    .max {
+      width: 100%;
+      height: auto;
+    }
+    .min {
+      width: 430px;
+      height: 323px;
+    }
+  </style>
+
+  <body>
+    <div display="flex" flex-direction="row">
+      <div class="video-container col">
+        <text style="font-size: 48px; padding-bottom: 2.7cm"
+          >基于深度学习的神经细胞追踪技术研究<br />--------------实验结果</text
+        >
+        <text style="padding-bottom: 0.5cm">输入视频</text>
+        <img class="gifplayer" src="src/cell_0.jpg" />
+
+        <a
+          href="https://frozen-hc.github.io/cell_track_video_result/"
+          style="font-size: 24px; padding-top: 2.7cm"
+          >查看视频</a
+        >
+      </div>
+      <div class="video-container col">
+        <div class="inner-container" style="padding-bottom: 0.2cm">
+          <text style="padding-right: 0.5cm; writing-mode: tb-rl">
+            (a1) Faster R-CNN + DeepSORT
+          </text>
+          <img class="gifplayer" src="src/cell_a1.jpg" />
+
+        </div>
+        <div class="inner-container" style="padding-bottom: 0.2cm">
+          <text style="padding-right: 0.5cm; writing-mode: tb-rl">
+            (b1) Mask R-CNN + DeepSORT
+          </text>
+          <img class="gifplayer" src="src/cell_b1.jpg" />
+
+        </div>
+        <div class="inner-container" style="padding-bottom: 0.2cm">
+          <text style="padding-right: 0.5cm; writing-mode: tb-rl">
+            (c1) YOLOV5s + DeepSORT
+          </text>
+          <img class="gifplayer" src="src/cell_c1.jpg" />
+          </iframe>
+        </div>
+      </div>
+      <div class="video-container col">
+        <div class="inner-container" style="padding-bottom: 0.2cm">
+          <text style="padding-right: 0.5cm; writing-mode: tb-rl">
+            (a2) Faster R-CNN + ByteTrack </text
+          >
+          <img class="gifplayer" src="src/cell_a2.jpg" />
+        </div>
+        <div class="inner-container" style="padding-bottom: 0.2cm">
+          <text style="padding-right: 0.5cm; writing-mode: tb-rl">
+            (b2) Mask R-CNN + ByteTrack
+          </text>
+          <img class="gifplayer" src="src/cell_b2.jpg" />
+        </div>
+        <div class="inner-container" style="padding-bottom: 0.2cm">
+          <text style="padding-right: 0.5cm; writing-mode: tb-rl">
+            (c2) YOLOV5s + ByteTrack
+          </text>
+          <img class="gifplayer" src="src/cell_c2.jpg" />
+
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.gifplayer.js"></script>
+    <script>
+        $('.gifplayer').gifplayer({ label: 'play' });
+    </script>
+  </body>
+</html>
